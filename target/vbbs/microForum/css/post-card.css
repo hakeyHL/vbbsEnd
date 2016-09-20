@@ -1,0 +1,34 @@
+body{ font-family: "Microsoft YaHei";}
+.post-container{padding:10px 10px 0 10px;background-color: #fff;}
+.post-content{border-bottom:1px solid #DBDDE3;width:100%;}
+.write-area{width:100%;height:120px;}
+.post-position{border-bottom:2px solid #DBDDE3;padding:10px 0;}
+.position-tit{font-size:16px;font-weight:600;margin-left:5px;}
+.position-right{float:right;margin-top:4px;}
+.sort-sifting{padding:12px 0 0 0;}
+.sort-item{float:left;border:1px solid #FFB14F;color:#FFB14F;font-size:14px;padding:3px 8px;margin-right:12px;border-radius: 5px;margin-bottom:12px;}
+.footer{height:60px ;width:100%;border-top:1px solid #DBDDE3;position:fixed;left:0;bottom:0;}
+.menu-btn{width:44px;height:44px;border-radius: 44px;background-color: #58E192;float:left;margin:9px 0 0 20px;}
+.menu-btn span{margin:10px;}
+.post-btn{text-align:center;width:120px;background-color: #7867FA;padding:12px 0;border-radius: 30px;color:#fff;display:inline-block;position:absolute;top:10px;left:50%;margin-left:-60px;}
+.post-header{float:right;width:43px;height:43px;border-radius:43px;background-color: #BCC1BE;margin-top: 8px;color:#000;text-align: center;margin-right:20px;line-height:43px;}
+.footer-container{position:relative;width:100%;height:60px;}
+/*.webuploader-pick{color:#E1E1E1;font-size:96px;border:1px solid #E1E1E1;background-color: #fff;line-height: 56px;width:70px;height:70px;padding:0;}*/
+/*.parentFileBox>.fileBoxUl>li{width:50px;height:50px;}*/
+/*.parentFileBox>.fileBoxUl>li>.viewThumb{width:50px;height:50px;}*/
+/*.webuploader-container{display:inline-block;float:left;margin-top:4px;}*/
+/*.parentFileBox{display:inline-block;float:left;height:119px;max-width:228px;}*/
+/*.diyButton{width:0;height:0;}*/
+/*.diyStart{display:none;}*/
+/*.diyCancelAll{display:none;}*/
+/*.fileBoxUl{display:inline-block;}*/
+/*.diyFileName{display:none;}*/
+/*.diySuccess{display:none;}*/
+/*.diyCancel{display:block;!important;background-size: 21px auto;!important}*/
+.upload-btn{border:1px solid #E1E1E1;width:50px;height:50px;color:#E1E1E1;font-size:68px;line-height: 39px;}
+.upload-box{width:50px;height:50px;display:inline-block;float:left;margin-right:10px;margin-bottom:10px;}
+.upload-file{opacity: 0;width:50px;height:50px;position:absolute;}
+.preview{width:50px;height:50px;}
+.img-container{display:inline-block;float:left;margin:0 10px 10px 0;position:relative;}
+.close-btn{position:absolute;top:1px;right:2px;display:block;width:18px;height:18px;border-radius:18px;background: rgba(255,255,255,1);text-align:center;line-height: 17px;}
+.post-header img{width:43px;height:43px;border-radius: 43px;}

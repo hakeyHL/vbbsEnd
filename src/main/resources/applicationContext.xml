@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                           http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	                           http://www.springframework.org/schema/tx
+	                           http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	                           http://www.springframework.org/schema/context
+	                           http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 引入配置文件 -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+                <value>classpath:weixin.properties</value>
+                <value>classpath:system.properties</value>
+            </list>
+        </property>
+    </bean>
+    
+
+    <aop:aspectj-autoproxy/>
+
+    <!-- 自动开启“注解实现Bean依赖注入”支持。 -->
+    <context:component-scan base-package="com.bbs.mybatis.*"/>
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
+    <!-- 阿里 druid数据库连接池 -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="driverClassName" value="${driverClassName}" />
+        <property name="url" value="${url}" />
+        <property name="username" value="${username}" />
+        <property name="password" value="${password}" />
+        <!-- 监控统计 -->
+        <property name="filters" value="${filters}" />
+        <!-- 最大并发连接数 -->
+        <property name="maxActive" value="${maxActive}" />
+        <!-- 最小连接池数量 -->
+        <property name="minIdle" value="${minIdle}" />
+        <!-- 初始化连接数量 -->
+        <property name="initialSize" value="${initialSize}" />
+        <!-- 获取连接等待超时的时间 -->
+        <property name="maxWait" value="${maxWait}" />
+        <!-- 间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+        <property name="timeBetweenEvictionRunsMillis" value="${timeBetweenEvictionRunsMillis}" />
+        <!-- 一个连接在池中最小生存的时间，单位是毫秒 -->
+        <property name="minEvictableIdleTimeMillis" value="${minEvictableIdleTimeMillis}" />
+        <property name="validationQuery" value="${validationQuery}" />
+        <property name="testWhileIdle" value="${testWhileIdle}" />
+        <property name="testOnBorrow" value="${testOnBorrow}" />
+        <property name="connectionInitSqls" value="set names utf8mb4" />
+	</bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+	
+  <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+     <!--dataSource属性指定要用到的连接池--> 
+     <property name="dataSource" ref="dataSource"/> 
+     <!-- 所有配置的mapper文件 -->
+    <property name="mapperLocations" value="classpath:mapper/*.xml" />
+  </bean> 
+  
+   <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory" />
+	</bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.bbs.mybatis.inter" />
+    </bean>
+
+    <!-- 事务管理 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+
+</beans>

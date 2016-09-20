@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, p, ul, li, form, button, input, textarea, a, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+div, p, {
+  box-sizing: border-box;
+}
+footer, header, main, nav, section {
+  display: block;
+}
+body {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+button[type="button"] {
+  cursor: pointer;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+input[type="submit"],
+button[type="submit"] {
+  cursor: pointer;
+}
+/*清除内外边距*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+:focus {
+  outline: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+/*重置列表*/
+img,
+a img {
+  border: none;
+}
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+em,
+i {
+  font-style: normal;
+}
+textarea {
+  resize: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+
+
+
+/*--清除浮动
+------------------------------------------------------------------------------------------*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  clear: both;
+  *zoom: 1;
+}
+
+.relative {
+  position: relative;
+}
+
+.lazy {
+  display: none;
+}
+.error-page {
+  text-align: center;
+  font-size: 14px;
+  padding: 100px 0;
+  color: #ff3333;
+}
+
+/*排版*/
+
+html {
+  font-size: 20px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: sans-serif;
+}
+
+.sprite {
+  display: inline-block;
+  background-image: url(../images/h5-sprite.png);
+  background-repeat: no-repeat;
+  background-size: 93px auto;
+}
+
+.sprite11 { background-position: 0px 0px;height:11px;padding-left:19px;}
+.sprite12 { background-position: -27px -1px;height:14px;padding-left:17px;}
+.sprite13 { background-position: -52px 0px;height:18px;padding-left:18px;;}
+.sprite14 { background-position: -76px 0px;height:18px;padding-left:18px;}
+.sprite21 { background-position: 0px -22px;height:21px;padding-left:22px;}
+.sprite22 { background-position: -30px -29px;height:11px;padding-left:12px;}
+.sprite23 { background-position: -54px -29px;height:8px;padding-left:9px;}
+.sprite24 { background-position: -68px -25px;height:17px;padding-left:26px;}
+.sprite31 { background-position: 0px -49px;height:42px;padding-left:43px;}
+.sprite32 { background-position: -47px -56px;height:21px;padding-left:22px;}
+.sprite41 { background-position: -5px -97px;height:16px;padding-left:17px;}
+.sprite42 { background-position: -25px -96px;height:21px;padding-left:24px;}
+.sprite43 { background-position: -53px -99px;height:15px;padding-left:13px;}
+.sprite51 { background-position: -3px -124px;height:15px;padding-left:9px;}
+.sprite52 { background-position: -18px -124px;height:14px;padding-left:17px;}
+.sprite53 { background-position: -38px -124px;height:12px;padding-left:14px;}
+.sprite54 { background-position: -57px -125px;height:12px;padding-left:9px;}
+.sprite61 { background-position: 0px -144px;height:22px;padding-left:22px;}
+.sprite62 { background-position: -28px -144px;height:21px;padding-left:22px;}
+.sprite63 { background-position: -53px -141px;height:22px;padding-left:15px;}

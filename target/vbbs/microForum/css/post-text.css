@@ -1,0 +1,56 @@
+body{background-color: #E9EBEF;font-family: "Microsoft YaHei";}
+.from-box{background-color: #fff;border-bottom:1px solid #DBDDE3;padding:10px;}
+.from-tit{font-size:16px;color:#9A9A9A;font-weight:600;}
+.from-who{font-size:16px;color:#3A87C9;font-weight:600;}
+.right-btn{float:right;margin-top:4px;}
+.test-box{padding:12px;background-color: #fff;border-bottom:1px solid #DBDDE3;}
+.test-header{position:relative;}
+.test-img{width:42px;border-radius: 42px;float:left;}
+.test-rank{width:16px;position:absolute;top:25px;left:29px;}
+.test-text{float:left;margin-left:15px;}
+.test-p{font-size:14px;}
+.test-p span{font-size:12px;color:#787878;margin-right:10px;}
+.test-tit{font-size:16px;color:#222222;margin-top:10px;}
+.question-box{background-color: #EFEFEF;padding:10px;margin:20px 0 20px;border-radius: 5px;}
+.question-img{float:left;}
+.question-text{float:left;margin-left:10px;}
+.question-p{font-size:16px;}
+.question-p span{font-size:14px;color:#9A9A9A;margin-right:10px;}
+.handle-box{width:100%;margin-top:20px;}
+.handle-p{float:left;width:33.3%;text-align: center;}
+.handle-p span{color:#9A9A9A;}
+.reply-box{margin-top:10px;background-color: #fff;border-bottom:1px solid #D6D6D9;margin-bottom:70px;}
+.reply-head{border-bottom:1px solid #DBDDE3;}
+.rhead-p{width:33.3%;float:left;text-align: center;}
+.rhead-span{color:#9A9A9A;padding:10px 0;display:inline-block;font-size:15px;font-weight:600;}
+.rhead-active{color:#FFB14F;border-bottom:2px solid #FFB14F;}
+.reply-item{padding:10px 23px 10px; color:#B5B5B5;}
+.reply-item img{width:21px;float:left;}
+.item-name{float:left;margin-left:8px;}
+.item-floor{float:right;}
+.item-content{color:#222;font-size:16px;margin-top:10px;}
+.item-delate{float:right;margin-right:15px;}
+.message{float:right;margin-top:3px;}
+.item-foot{margin-top:10px;}
+.footer{height:60px ;width:100%;border-top:1px solid #DBDDE3;position:fixed;left:0;bottom:0;background-color:#fff;}
+.menu-btn{width:44px;height:44px;border-radius: 44px;background-color: #58E192;float:left;margin:9px 0 0 20px;}
+.menu-btn span{margin:10px;}
+.post-btn{text-align:center;width:120px;background-color: #7867FA;padding:12px 0;border-radius: 30px;color:#fff;display:inline-block;position:absolute;top:10px;left:50%;margin-left:-60px;}
+.post-header{background:#FF964B;float:right;width:43px;height:43px;border-radius:43px;margin-top: 8px;color:#000;text-align: center;margin-right:20px;line-height:43px;}
+.footer-container{position:relative;width:100%;height:60px;}
+.reply-btn{margin-left:10px ;display:inline-block;}
+
+/*9宫格图片展示样式*/
+
+.img-box {
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+
+.img-box .img-item {
+    padding: 5px 5px 0 0;
+}
+
+.img-box .img-item img {
+    width: 80%;
+}
